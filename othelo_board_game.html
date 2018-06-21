@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Nahian Afsari</title>
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato"/>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href = "styles/application.css" />
+		<link rel="icon" 
+      type="image/png" 
+      href="images/favicon.gif">
+	</head>
+	<body class="bodyCenter">
+		<br><br><br>
+	<h1 class="project_title">Othelo Board Game</h1>
+	<br><br><br><br><br>
+	<div class="section_title">About</div>
+	<br><br><br>
+    <p class="content">Othelo  Board  Game  is  exactly  like  the  regular  Othelo  Board  Game  except  it  is  played using an Ascii Board and it is yet to be made into a graphical game. User inputs the row and column number that they would like place a piece in and the program takes the input, makes changes to the Ascii board based on the algorithm implemented and displays the new Ascii Board to the user. The next turn is the computer's turn so it automatically generates another Ascii Board showing the results of the computer's move. I designed the computer's move such that it makes more smart moves than the readily available ones.</p>
+     <br><br><br>
+    <div class="section_title">Language/Technology Used</div>
+    <br><br><br>
+    <p class="content_tech">MIPS Assembly</p>
+    <br><br><br>
+    <div class="section_title">The Logic</div>
+    <br><br><br>
+    <p class="content">This program was implemented using MIPS Assembly Language. I really broke down the program into as many methods as possible. One of the bigger methods was called validMove and this method had 8 more methods inside of it. All this method did was check whether the position the user or computer wants to place a piece in was valid or not from 8 different directions(Horizontally from the left and right, Vertically from the top and bottom, Diagonally Top-Left, Top-Right, Bottom-Left, Bottom-Right) and if it was valid, return a 0 and if not, return a 1. In web applications for reversi game, the board would highlight positions that user can place their pieces in so the user knows there are positions available. For this game I decided to call validMove twice so that the program could check if there even exists a valid move before prompting the user to enter the position they would like to place their piece in. </p>
+    	<p class="content">The MIPS Language provides limited space for storing variables. There are only 32 32-bit registers which meant I had to optimize my use of registers. When I implemented methods that jumped and linked to other methods, I expected only the $v0 (return value register) value to be changed but in reality, it sometimes changed the ‘t’ (other variables that shouldn't be changed) registers. Therefore, I had to figure out a way to call methods that wouldn’t change these registers. One way to get around it was using the ‘s’ registers where the value is kept constant. Another way to overcome this challenge was to call the method at a position where even if the ‘t’ registers changed, it wouldn’t affect the current method because I reset the values later. I optimized the use of the ‘t’ registers by thinking ahead about whether some of the registers were being reset each time a method is called and if so, I didn’t worry too much about their values getting changed in other methods. </p>
+
+<br><br><br>
+<div class="section_title">Examples</div>
+<br><br><br>
+<div>
+    <div >
+        <img class="img_border" src="images/invalidmove.png" height="400" width="400"/>
+    
+        <img class="img_border" src="images/move.png"/ height="400" width="400"/>
+    </div>
+   
+</div>
+<br><br><br><br><br><br><br>
+ <footer class="bottom"><a href="index.html" class="topIcon"><i class="fa fa-home" style="font-size:45px"></i></a></footer>
+
+
+	</body>
+</html>

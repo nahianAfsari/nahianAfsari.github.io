@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Nahian Afsari</title>
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato"/>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href = "styles/application.css" />
+		<link rel="icon" 
+      type="image/png" 
+      href="images/favicon.gif">
+	</head>
+	<body class="bodyCenter">
+		<br><br><br>
+	<h1 class="project_title">Cryptography Program</h1>
+	<br><br><br><br><br>
+	<div class="section_title">About</div>
+	<br><br><br>
+    <p class="content">Developed a cipher that encrypts and decrypts messages containing any character in the alphabet. I will be adding digits to the cipher's valid input range. User can put in a string that he/she wants to encrpyt, the program will prompt for a shift which is a number and is used in the algorithm to encrpyt the string. The user can send that encrypted message & the specific shift used to another user who has access to this program. The program then is able to decrypt the message using that information.  </p>
+ 
+     <br><br><br>
+    <div class="section_title">Language/Technology Used</div>
+    <br><br><br>
+    <p class="content_tech">C++</p>
+    <br><br><br>
+    <div class="section_title">The Logic</div>
+    <br><br><br>
+    <p class="content">To encrypt a string, an array is used to keep the alphabet stored. Then the program calculates the indices of the user inputted string according to the alphabet array. Each character in the string then goes into a for-loop where the shift is used to create a unique number which is added to the original index of the characters and a new character is picked out corresponding to the new index calculated.</p>
+    	<p class="content">Similar concept is used to decrypt the string. The program calculates the indices of the string. Then the program uses the unique shift given and comes up with unique number used for each character and instead of adding, the program subtracts that unique number from the calculated indices revealing the original message </p>
+
+<br><br><br>
+<div class="section_title">Examples</div>
+<br><br><br>
+<div>
+    <div >
+    	<img class="img_border" src="images/encrypt.png" height="400" width="400"/>
+    
+        <img class="img_border" src="images/decrypt.png"/ height="400" width="400"/>
+      
+    </div>
+   
+</div>
+ 
+<br><br><br><br><br><br><br>
+ <footer class="bottom"><a href="index.html" class="topIcon"><i class="fa fa-home" style="font-size:45px"></i></a></footer>
+
+
+	</body>
+</html>

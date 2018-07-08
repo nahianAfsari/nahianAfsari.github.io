@@ -237,7 +237,7 @@ text-transform: uppercase;
    padding-left: 16em;
    text-align: left;
    text-transform: bold;
-   font-size: 15px;
+   font-size: 16.5px;
    color:white;
 
 }
@@ -399,8 +399,19 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(213,158,200,1) 0%, r
     letter-spacing: 5px;
 
 }
+/*
+Fixing Mobile Issue
+*/
 
+.expand{
+transform:scale(1);
+-webkit-transform:scale(1); 
+}
 
+.close{
+transform:scale(0);
+-webkit-transform:scale(0); 
+}
 
 
 

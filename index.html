@@ -23,10 +23,11 @@
 			</nav>
 		</header>
 		<div class='menu'>
-  <div class='button main'><span><br><br><br><br><br><br>&nbsp;Nahian<br><br>&nbsp;Afsari</span>
+  <div class='button main' onclick="toggleExpansion()"><span><br><br><br><br><br><br>&nbsp;Nahian<br><br>&nbsp;Afsari</span>
     
   </div>
-  <div class='sqContainer'>  
+
+  <div class='sqContainer close' id="linkcontainer">  
     <a href="resources/resume.pdf" target="_blank"><div class='sq' id='sq1'>RESUME</div></a>
     <a href="projects.html"><div class='sq' id='sq2'>PROJECTS</div></a>
     <a href="aboutMyArt.html"><div class='sq' id='sq3'>GALLERY</div></a>
@@ -34,6 +35,22 @@
     <div class='button'></div>
    </div>
 </div>
+ <script>
+function toggleExpansion() {
+var myButtonLinks = document.getElementById("linkcontainer").classList;
+
+if (myButtonLinks.contains("close")) {
+myButtonLinks.remove("close");
+} else {
+myButtonLinks.add("close");
+}
+if (myButtonLinks.contains("expand")) {
+myButtonLinks.remove("expand");
+} else {
+myButtonLinks.add("expand");
+}
+}
+</script>
    
 		
 	</body>
